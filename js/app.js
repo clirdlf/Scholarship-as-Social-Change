@@ -1,42 +1,108 @@
-const margin = {top: 10, right: 40, bottom: 30, left: 30},
-    width = 450 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+const svg = d3.select("svg"),
+  width = +svg.attr("width"),
+  height = +svg.attr("height");
 
-// append the svg object to the body of the page
-const svG = d3.select("#scatter_area")
-  .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-    .attr("transform",
-          "translate(" + margin.left + "," + margin.top + ")");
+const color = d3.scaleOrdinal(d3.schemeCategory20);
 
-// Create data
-const data = [ {x:10, y:20}, {x:40, y:90}, {x:80, y:50} ]
+const simulation = d3
+  .forceSimulation()
+  .force(
+    "link",
+    d3.forceLink().id(function (d) {
+      return d.id;
+    })
+  )
+  .force("charge", d3.forceManyBody())
+  .force("center", d3.forceCenter(width / 2, height / 2));
 
-// X scale and Axis
-const x = d3.scaleLinear()
-    .domain([0, 100])         // This is the min and the max of the data: 0 to 100 if percentages
-    .range([0, width]);       // This is the corresponding value I want in Pixel
-svG
-  .append('g')
-  .attr("transform", "translate(0," + height + ")")
-  .call(d3.axisBottom(x));
+d3.json("/js/data.json", function (error, graph) {
+  if (error) throw error;
 
-// X scale and Axis
-const y = d3.scaleLinear()
-    .domain([0, 100])         // This is the min and the max of the data: 0 to 100 if percentages
-    .range([height, 0]);       // This is the corresponding value I want in Pixel
-svG
-  .append('g')
-  .call(d3.axisLeft(y));
+  const link = svg
+    .append("g")
+    .attr("class", "links")
+    .selectAll("line")
+    .data(graph.links)
+    .enter()
+    .append("line")
+    .attr("stroke-width", function (d) {
+      return Math.sqrt(d.value);
+    });
 
-// Add 3 dots for 0, 50 and 100%
-svG
-  .selectAll("whatever")
-  .data(data)
-  .enter()
-  .append("circle")
-    .attr("cx", function(d){ return x(d.x) })
-    .attr("cy", function(d){ return y(d.y) })
-    .attr("r", 7)
+  const node = svg
+    .append("g")
+    .attr("class", "nodes")
+    .selectAll("g")
+    .data(graph.nodes)
+    .enter()
+    .append("g");
+
+  const circles = node
+    .append("circle")
+    .attr("r", 5)
+    .attr("fill", function (d) {
+      return color(d.group);
+    });
+
+  // Create a drag handler and append it to the node object instead
+  const drag_handler = d3
+    .drag()
+    .on("start", dragstarted)
+    .on("drag", dragged)
+    .on("end", dragended);
+
+  drag_handler(node);
+
+  const lables = node
+    .append("text")
+    .text(function (d) {
+      return d.id;
+    })
+    .attr("x", 6)
+    .attr("y", 3);
+
+  node.append("title").text(function (d) {
+    return d.id;
+  });
+
+  simulation.nodes(graph.nodes).on("tick", ticked);
+
+  simulation.force("link").links(graph.links);
+
+  function ticked() {
+    link
+      .attr("x1", function (d) {
+        return d.source.x;
+      })
+      .attr("y1", function (d) {
+        return d.source.y;
+      })
+      .attr("x2", function (d) {
+        return d.target.x;
+      })
+      .attr("y2", function (d) {
+        return d.target.y;
+      });
+
+    node.attr("transform", function (d) {
+      return "translate(" + d.x + "," + d.y + ")";
+    });
+  }
+});
+
+function dragstarted(d) {
+  if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+  d.fx = d.x;
+  d.fy = d.y;
+}
+
+function dragged(d) {
+  d.fx = d3.event.x;
+  d.fy = d3.event.y;
+}
+
+function dragended(d) {
+  if (!d3.event.active) simulation.alphaTarget(0);
+  d.fx = null;
+  d.fy = null;
+}
