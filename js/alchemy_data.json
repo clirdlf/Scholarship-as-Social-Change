@@ -1,0 +1,270 @@
+{
+    "nodes": [
+        {
+          "id": 1,
+          "project": "African American Trail Project",
+          "link": "https://africanamericantrailproject.tufts.edu/",
+          "type": "project"
+        },
+        {
+          "id": 2,
+          "project": "The Slave Dwelling Project/Joseph McGill",
+          "link": "https://slavedwellingproject.org/",
+          "type": "project"
+        },
+        {
+          "id": 3,
+          "project": "Indigenous D.C.",
+          "link": "https://indiancountrytoday.com/news/indigenous-dc-theres-an-app-for-that",
+          "type": "project"
+        },
+        {
+          "id": 4,
+          "project": "Local Contexts",
+          "link": "https://localcontexts.org/",
+          "type": "project"
+        },
+        {
+          "id": 5,
+          "project": "Native North East Portal",
+          "link": "https://nativenortheastportal.com/",
+          "type": "project"
+        },
+        {
+          "id": 6,
+          "project": "SAA Protocols for Native American Materials:",
+          "link": "https://www2.archivists.org/groups/native-american-archives-section/protocols-for-native-american-archival-materials-information-and-resources-page",
+          "type": "project"
+        },
+        {
+          "id": 7,
+          "project": "Stolen Relations",
+          "link": "https://indigenousslavery.org/",
+          "type": "project"
+        },
+        {
+          "id": 8,
+          "project": "Kouri-Vini Louisiana Creole Language Fanpage",
+          "link": "(https://www.facebook.com/Kourivini/)",
+          "type": "project"
+        },
+        {
+          "id": 9,
+          "project": "American Panorama",
+          "link": "https://dsl.richmond.edu/panorama/#maps.",
+          "type": "project"
+        },
+        {
+          "id": 10,
+          "project": "Queering the Map",
+          "link": "https://www.queeringthemap.com/",
+          "type": "project"
+        },
+        {
+          "id": 11,
+          "project": "Mapping Indigenous LA,",
+          "link": "https://mila.ss.ucla.edu/;",
+          "type": "project"
+        },
+        {
+          "id": 12,
+          "project": "Ticha",
+          "link": "https://ticha.haverford.edu/en/about/",
+          "type": "project"
+        },
+        {
+          "id": 13,
+          "project": "Torn Apart / Separados",
+          "link": "https://xpmethod.columbia.edu/torn-apart/volume/2/",
+          "type": "project"
+        },
+        {
+          "id": 14,
+          "project": "Mukurtu",
+          "link": "https://mukurtu.org/",
+          "type": "project"
+        },
+        {
+          "id": 15,
+          "project": "Obama Library",
+          "link": "https://www.obamalibrary.gov/#event-/timeline/item/presidential-inauguration",
+          "type": "project"
+        },
+        {
+          "id": 16,
+          "project": "The Black Bibliography Project",
+          "link": "https://blackbibliog.org/",
+          "type": "project"
+        },
+        {
+          "id": 17,
+          "project": "Future Libraries, Archives, and Museums in Excavation (FLAME)",
+          "link": "The contribution of the Archive and Cultural Heritage group, (recently renamed F.L.A.M.E) frames the importance of much needed decolonization work in the GLAM institutions that produce and preserve cultures and knowledge. Our podcast series holds the microphone up to archivists, scholars, and museum staff whose roles converse with collections pertaining to BIPOC communities. Thus far, two paths have emerged, one: reinterpreting archival, library, museum content that come from predominantly white colonial perspectives. The second path is introducing heretofore unknown (to many) BIPOC narratives into the mainstream. Such efforts have already been evolving in local BIPOC libraries, archives, and museums, in neighborhoods, and in tribal communities. In speaking with BIPOC scholars, archivists, librarians and allies we are keen to continue along the decolonization path for which they have lit the way. Many have recommended establishing contact with the communities to whom the collections belong, making sure that they have gained full agency over the life cycle and uses of the materials that pertain to BIPOC cultures and points of view. Full agency, they understand, is not necessarily limited to contracts or MOUs. Instead, it will be based on relationships they have begun to weave that make the practices of GLAM, such as labelling and repatriation, more mutually informed.",
+          "type": "group"
+        },
+        {
+          "id": 18,
+          "project": "Geographies of Engaged Digital Scholarship: Remaking Space and Place in the Academic Library",
+          "link": "Maps are an abstracted way of putting a firm border on all of the uncertainty and vagueness of the natural and constructed world. The same concept applies to the clear limit we put on the edge of a university. In reality, there are communities that transcend these boundaries. Despite this, the distinction we make between the university and the areas surrounding it limits the impact that an institution can have. The academic library is not immune to this instinct to draw boundaries and fix space. Even if a library mission is focused on the students and faculty within an institution, no individual can be meaningfully separated from their lived identities, environments, and cultural backgrounds, and thus neither can the academic library exist apart from its communities. A library cannot meaningfully serve the campus without also serving a range of communities. The tools of digital scholarship are one place where library workers can directly contribute to projects that transcend the university/community border.",
+          "type": "group"
+        },
+        {
+          "id": 19,
+          "project": "The Third Library and the Commons",
+          "link": "The idea of the “commons‿ is often invoked in discussions of the academic library’s future, but these references are often vague and rhetorical. What exactly does it mean for the library to be organized as a commons, and what might such a library look like? Does the concept of the commons offer a useful lens for identifying the contemporary library’s injustices or shortcomings? How might we draw on the concept of the commons to see beyond the horizon of the contemporary library, towards a “third library‿ that truly advances decolonial and democratic ends ? This essay engages with such questions, and explores how the constituent elements of the academic library–its knowledge assets, its workers, and its physical spaces–might be reoriented to the commons. It argues that such an orientation might facilitate the emergence of a “3rd Library‿ that is able to organize resistance to contemporary capitalism’s impetus towards the privatization and enclosure of knowledge, and help to recover a democratic conception of knowledge as a public good.",
+          "type": "group"
+        },
+        {
+          "id": 20,
+          "project": "The Future of Interactive, Gamified Digital Collections and Exhibits for Inclusion and Accessibility",
+          "link": "Imagining the future of libraries and especially of digital collections and exhibits cannot be completed without exploring the role games can play in this future. Besides their popularity, games are spaces that facilitate and inform our understanding of interactions in the 21st century. For instance, games have been examined as alternative spaces for designing learning experiences and environments (Richard and Gray, 2018). We adopt a similar perspective as we look into the ways gaming can inform the design of digital exhibits and help make digital collections and exhibits more accessible and inclusive to a wider audience.",
+          "type": "group"
+        },
+        {
+          "id": 21,
+          "project": "September 9. 2020",
+          "link": "https://caitkirby.com/downloads/Fall%202020.html",
+          "type": "project"
+        },
+        {
+          "id": 22,
+          "project": "What the 1921 Tulsa Race Massacre Destroyed (New York Times)",
+          "link": "https://www.nytimes.com/interactive/2021/05/24/us/tulsa-race-massacre.html",
+          "type": "project"
+        },
+        {
+          "id": 23,
+          "project": "Virtual Blockson",
+          "link": "https://dhandlib.org/2020/06/14/the-virtual-blockson-immersive-technologies-for-teaching-primary-source-literacy-on-the-african-diaspora/",
+          "type": "project"
+        },
+        {
+          "id": 24,
+          "project": "Land-Grab Universities",
+          "link": "https://www.landgrabu.org/",
+          "type": "project"
+        }
+      ],
+      "edges": [
+        {
+          "source": 1,
+          "target": 17,
+          "Project": "African American Trail Project",
+          "Associated with Group": "Future Libraries, Archives, and Museums in Excavation (FLAME)"
+        },
+        {
+          "source": 2,
+          "target": 17,
+          "Project": "The Slave Dwelling Project/Joseph McGill",
+          "Associated with Group": "Future Libraries, Archives, and Museums in Excavation (FLAME)"
+        },
+        {
+          "source": 3,
+          "target": 17,
+          "Project": "Indigenous D.C.",
+          "Associated with Group": "Future Libraries, Archives, and Museums in Excavation (FLAME)"
+        },
+        {
+          "source": 4,
+          "target": 17,
+          "Project": "Local Contexts",
+          "Associated with Group": "Future Libraries, Archives, and Museums in Excavation (FLAME)"
+        },
+        {
+          "source": 5,
+          "target": 17,
+          "Project": "Native North East Portal",
+          "Associated with Group": "Future Libraries, Archives, and Museums in Excavation (FLAME)"
+        },
+        {
+          "source": 6,
+          "target": 17,
+          "Project": "SAA Protocols for Native American Materials:",
+          "Associated with Group": "Future Libraries, Archives, and Museums in Excavation (FLAME)"
+        },
+        {
+          "source": 7,
+          "target": 17,
+          "Project": "Stolen Relations",
+          "Associated with Group": "Future Libraries, Archives, and Museums in Excavation (FLAME)"
+        },
+        {
+          "source": 8,
+          "target": 17,
+          "Project": "Kouri-Vini Louisiana Creole Language Fanpage",
+          "Associated with Group": "Future Libraries, Archives, and Museums in Excavation (FLAME)"
+        },
+        {
+          "source": 9,
+          "target": 18,
+          "Project": "American Panorama",
+          "Associated with Group": "Geographies of Engaged Digital Scholarship: Remaking Space and Place in the Academic Library"
+        },
+        {
+          "source": 10,
+          "target": 18,
+          "Project": "Queering the Map",
+          "Associated with Group": "Geographies of Engaged Digital Scholarship: Remaking Space and Place in the Academic Library"
+        },
+        {
+          "source": 11,
+          "target": 18,
+          "Project": "Mapping Indigenous LA,",
+          "Associated with Group": "Geographies of Engaged Digital Scholarship: Remaking Space and Place in the Academic Library"
+        },
+        {
+          "source": 12,
+          "target": 18,
+          "Project": "Ticha",
+          "Associated with Group": "Geographies of Engaged Digital Scholarship: Remaking Space and Place in the Academic Library"
+        },
+        {
+          "source": 13,
+          "target": 18,
+          "Project": "Torn Apart / Separados",
+          "Associated with Group": "Geographies of Engaged Digital Scholarship: Remaking Space and Place in the Academic Library"
+        },
+        {
+          "source": 14,
+          "target": 18,
+          "Project": "Mukurtu",
+          "Associated with Group": "Geographies of Engaged Digital Scholarship: Remaking Space and Place in the Academic Library"
+        },
+        {
+          "source": 15,
+          "target": 19,
+          "Project": "Obama Library",
+          "Associated with Group": "The Third Library and the Commons"
+        },
+        {
+          "source": 16,
+          "target": 17,
+          "Project": "The Black Bibliography Project",
+          "Associated with Group": "Future Libraries, Archives, and Museums in Excavation (FLAME)"
+        },
+        {
+          "source": 21,
+          "target": 17,
+          "Project": "September 9. 2020",
+          "Associated with Group": "The Future of Interactive, Gamified Digital Collections and Exhibits for Inclusion and Accessibility"
+        },
+        {
+          "source": 22,
+          "target": 17,
+          "Project": "What the 1921 Tulsa Race Massacre Destroyed (New York Times)",
+          "Associated with Group": "The Future of Interactive, Gamified Digital Collections and Exhibits for Inclusion and Accessibility"
+        },
+        {
+          "source": 23,
+          "target": 17,
+          "Project": "Virtual Blockson",
+          "Associated with Group": "The Future of Interactive, Gamified Digital Collections and Exhibits for Inclusion and Accessibility"
+        },
+        {
+          "source": 24,
+          "target": 18,
+          "Project": "Land-Grab Universities",
+          "Associated with Group": "Geographies of Engaged Digital Scholarship: Remaking Space and Place in the Academic Library"
+        }
+      ]
+}
