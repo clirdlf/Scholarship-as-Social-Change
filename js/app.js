@@ -1,8 +1,12 @@
 const svg = d3.select("svg"),
   width = +svg.attr("width"),
-  height = +svg.attr("height");
+  height = +svg.attr("height"),
+  linkDistance = 200;
 
-const color = d3.scaleOrdinal(d3.schemeCategory20);
+let colors = d3.scaleOrdinal(d3.schemeCategory20);
+
+
+console.log('colors', colors);
 
 const simulation = d3
   .forceSimulation()
@@ -18,6 +22,10 @@ const simulation = d3
 d3.json("js/data.json", function (error, graph) {
   if (error) throw error;
 
+  let color = d3.scaleOrdinal(d3.schemeCategory20);
+
+  let tooltip = d3.select("body").append("div").attr("class", "tooltip").style("opacity", 0);
+
   const link = svg
     .append("g")
     .attr("class", "links")
@@ -26,10 +34,11 @@ d3.json("js/data.json", function (error, graph) {
     .enter()
     .append("line")
     .attr("stroke-width", function (d) {
-      return Math.sqrt(d.value);
+      return 1;
+      //return Math.sqrt(d.value);
     });
 
-  const node = svg
+  let node = svg
     .append("g")
     .attr("class", "nodes")
     .selectAll("g")
@@ -37,11 +46,25 @@ d3.json("js/data.json", function (error, graph) {
     .enter()
     .append("g");
 
-  const circles = node
+  let circles = node
     .append("circle")
-    .attr("r", 5)
+    .attr("r", function(d){ return d.size;})
     .attr("fill", function (d) {
-      return color(d.group);
+      return color(d.size * 3);
+    })
+    // @see https://bl.ocks.org/almsuarez/4333a12d2531d6c1f6f22b74f2c57102
+    .on('mouseover.tooltip', function(d) {
+      tooltip.transition()
+        .duration(300)
+        .style("opacity", .8);
+      tooltip.html("Name:" + d.id + "<p/>link:" + d.link)
+        .style("left", (d3.event.pageX) + "px")
+        .style("top", (d3.event.pageY + 10) + "px");
+    })
+    .on("mouseout.tooltip", function() {
+      tooltip.transition()
+        .duration(100)
+        .style("opacity", 0);
     });
 
   // Create a drag handler and append it to the node object instead
@@ -105,4 +128,22 @@ function dragended(d) {
   if (!d3.event.active) simulation.alphaTarget(0);
   d.fx = null;
   d.fy = null;
+}
+
+function releasenode(d) {
+  d.fx = null;
+  d.fy = null;
+}
+
+function fade(opacity) {
+  return d => {
+    node.style('stroke-opacity', function (o) {
+      const thisOpacity = isConnected(d, o) ? 1 : opacity;
+      this.setAttribute('fill-opacity', thisOpacity);
+      return thisOpacity;
+    });
+
+    link.style('stroke-opacity', o => (o.source === d || o.target === d ? 1 : opacity));
+
+  };
 }
